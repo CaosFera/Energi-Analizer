@@ -41,8 +41,27 @@ INSTALLED_APPS = [
     'post.apps.PostConfig', 
     'rest_framework',
     'rest_framework_gis',
+    'dj_rest_auth',
+    'rest_framework.authtoken',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+    "drf_spectacular",
+
     
 ]
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = True  # Define como True para exigir nome de usuário
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'  # Define o campo de nome de usuário
+ACCOUNT_AUTHENTICATION_METHOD = 'email'  # Permite autenticação via nome de usuário ou email
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # Se você não quer verificação de email
+
+AUTH_USER_MODEL = 'users.User'
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,7 +71,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Backend padrão do Django
+    'allauth.account.auth_backends.AuthenticationBackend',  # Backend do django-allauth
+]
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    
+}
+
 
 ROOT_URLCONF = 'EnergiAnalizer.urls'
 
@@ -124,11 +154,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+	"TITLE": "Energi Analizer",
+	"DESCRIPTION": "Your project description",
+	"VERSION": "1.0.0",
+	"SERVE INCLUDE SCHEMA": False,
+    
+	
+}
