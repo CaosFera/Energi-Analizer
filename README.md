@@ -77,7 +77,7 @@ $ python manage.py runserver
     POST /users/register/employee/ Resgistra um funcionário (apenas empresas podem cadastrar funcionários);
 ```
 <div align="center">
-    <img src="" style="max-width: 100%; height: auto; width: 500px;"/>
+    <img src="assets/rotas.png" style="max-width: 100%; height: auto; width: 500px;"/>
 </div>
 
 
