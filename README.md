@@ -77,9 +77,7 @@ $ python manage.py runserver
     POST /users/register/employee/ Resgistra um funcionário (apenas empresas podem cadastrar funcionários);
 ```
 <div align="center">
-    <img src="assets/request-users-login.png" style="max-width: 100%; height: auto; width: 500px;"/>
-    <img src="assets/request-users-logout.png" style="max-width: 100%; height: auto; width: 500px;"/>
-    <img src="assets/request-users-registration.png" style="max-width: 100%; height: auto; width: 500px;"/>
+    <img src="" style="max-width: 100%; height: auto; width: 500px;"/>
 </div>
 
 
@@ -109,3 +107,10 @@ $ python manage.py runserver
 - **psycopg2-binary**: [Driver PostgreSQL para Python](https://www.psycopg.org/docs/)
 - **validate-docbr**: [Validação de documentos brasileiros](https://sambapython.github.io/docbr/)
 
+## 👥 Colaboradores
+
+Agradecemos aos colaboradores que ajudaram no desenvolvimento deste projeto!
+
+- [**Nome do Colaborador 1**](https://github.com/usuario1) - Descrição do que fez no projeto
+- [**Nome do Colaborador 2**](https://github.com/usuario2) - Descrição do que fez no projeto
+- [**Nome do Colaborador 3**](https://github.com/usuario3) - Descrição do que fez no projeto
