@@ -166,15 +166,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # Autenticação via Token
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',  # Requer autenticação para acessar a API
+    ],
 }
 
 SPECTACULAR_SETTINGS = {
-	"TITLE": "Energi Analizer",
-	"DESCRIPTION": "Your project description",
-	"VERSION": "1.0.0",
-	"SERVE INCLUDE SCHEMA": False,
-    
-	
+    "TITLE": "Energi Analizer",
+    "DESCRIPTION": "Your project description",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "AUTHENTICATION_WHITELIST": [
+        "rest_framework.authentication.TokenAuthentication",
+    ],
+    "SWAGGER_UI_SETTINGS": {
+        "persistAuthorization": True,  # Mantém a autorização no Swagger UI durante as requisições
+    },
 }

@@ -1,17 +1,17 @@
 import uuid
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
-from abstract.models import AbstractModel, AbstractManager
 from django.core.exceptions import ValidationError
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 
+
+
 from django.conf import settings
 
-class UserManager(BaseUserManager, AbstractManager):
+class UserManager(BaseUserManager):
     def create_user(self, username, email, password=None, **kwargs):
         # Verificar campos obrigatórios
         if not username:

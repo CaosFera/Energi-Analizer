@@ -1,5 +1,4 @@
 from django.db import models
-from abstract.models import AbstractManager, AbstractModel
 from users.models import Employee
 from django.contrib.gis.db import models
 
@@ -22,7 +21,7 @@ class Hub(models.Model):
     hub_location = models.ForeignKey(Location, on_delete=models.PROTECT, related_name='hub_locations')
     installation_date = models.DateField("Data de Instalação", blank=False, null=False)
 
-class Post(AbstractModel):
+class Post(models.Model):
     installation_date = models.DateField("Data de Instalação", blank=False, null=False)
     type_lamp = models.CharField("Tipo de Lâmpada", max_length=50)
     active = models.BooleanField("Ativo ?", default=True)
