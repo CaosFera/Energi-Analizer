@@ -86,7 +86,7 @@ $ python manage.py runserver
     
 
 🛠️ Tecnologias Utilizadas:
-```bash
+
    ### Backend
 - **Django**: [Documentação oficial do Django](https://docs.djangoproject.com/)
 - **Django Rest Framework**: [Documentação oficial do Django Rest Framework](https://www.django-rest-framework.org/)
@@ -109,4 +109,3 @@ $ python manage.py runserver
 - **psycopg2-binary**: [Driver PostgreSQL para Python](https://www.psycopg.org/docs/)
 - **validate-docbr**: [Validação de documentos brasileiros](https://sambapython.github.io/docbr/)
 
-```
