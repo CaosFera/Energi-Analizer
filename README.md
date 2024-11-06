@@ -14,7 +14,7 @@
 
 <div style="text-align: justify;">
     <h4> 
-        Energi Analyzer** é um projeto desenvolvido como parte de uma residência em software organizada pelo CEPEI. Este projeto foi criado para atender ao desafio de **Otimização Energética Inteligente na Indústria 4.0**, proposto em um hackathon. Nossa equipe escolheu este tema visando criar uma solução eficiente para o monitoramento e manutenção da iluminação pública.
+        Energi Analyzer** é um projeto desenvolvido como parte de uma residência em software organizada pelo CEPEI. Este projeto foi criado para atender ao desafio de Otimização Energética Inteligente na Indústria 4.0, proposto em um hackathon. Nossa equipe escolheu este tema visando criar uma solução eficiente para o monitoramento e manutenção da iluminação pública.
     </h4>
 </div>
 
@@ -38,6 +38,8 @@ O Energi Analyzer é uma ferramenta de monitoramento e gestão de lâmpadas em p
 <h2 align="center"> 
     :construction:  Projeto em construção  :construction:
 </h2>
+
+
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina Python 3.10 ou qualquer versão acima. Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
@@ -46,10 +48,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina Python 3.10 
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/CaosFera/FASHION-AVENUE.git
+$ git clone https://github.com/CaosFera/Energi-Analizer.git
 
 # 1. Acesse a pasta do projeto
-$ cd Fashion-Avenue
+$ cd Energi-Analizer
 
 # 2. Crie e ative o ambiente virtual (virtualenv)
 $ python -m venv venv
@@ -69,13 +71,14 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 
 # O servidor inciará na porta:8000 - acesse <http://localhost:8000>
-🎯 Aqui estão as principais rotas da API de e-commerce:
+🎯 Aqui estão as principais rotas da API:
 
 🔑 Autenticação de Usuários:
 
     POST /users/login/ Dar acesso ao usuário
     POST /users/logout/ Desconecta o usuário
-    POST /users/registration/ Resgistra um usuário
+    POST /users/register/company/ Resgistra uma empresa
+    POST /users/register/employee/ Resgistra um funcionário (apenas empresas podem cadastrar funcionários)
 ```
 <div align="center">
     <img src="assets/request-users-login.png" style="max-width: 100%; height: auto; width: 500px;"/>
@@ -83,31 +86,8 @@ $ python manage.py runserver
     <img src="assets/request-users-registration.png" style="max-width: 100%; height: auto; width: 500px;"/>
 </div>
 
-```bash
-
-🛒 Produtos:
-
-    GET /products/ - Retorna a lista de produtos disponíveis.
-    GET /categories/slug/{id}/products/slug/{id}/ - Retorna os detalhes de um produto específico.
-    POST /categories/slug/{id}/products/slug/{id}/ - Cria um novo produto (requer autenticação de administrador).
-    PUT /categories/slug/{id}/products/slug/{id}/ - Atualiza um produto (requer autenticação de administrador).
-    DELETE /categories/slug/{id}/products/slug/{id}/ - Exclui um produto (requer autenticação de administrador).
 
     
-📦 Categorias:
-
-    GET /categories/ - Retorna a lista de categorias de produtos.
-    GET /categories/slug/{id}/ - Retorna os detalhes de uma categoria específica.
-    POST /categories/slug/{id}/ - Cria uma nova categoria (requer autenticação de administrador).
-    PUT /categories/slug/{id}/ - Atualiza uma categoria (requer autenticação de administrador).
-    DELETE /categories/slug/{id}/ - Exclui  uma categoria (requer autenticação de administrador).
-
-🛍️ Carrinho de Compras:
-
-    GET /cart-detail/ - Retorna os itens no carrinho de compras do usuário.
-    POST /cart/ - Adiciona um produto ao carrinho.
-    DELETE /cart/ - Remove um produto do carrinho.
-
 
 🛠️ Tecnologias Utilizadas:
 ```
@@ -117,9 +97,22 @@ $ python manage.py runserver
 
 ### Banco de Dados
 - **PostgreSQL**: [Documentação oficial do PostgreSQL](https://www.postgresql.org/docs/)
+- **PostGIS**: Extensão geoespacial para PostgreSQL que permite o trabalho com dados de geolocalização, incluindo suporte para operações espaciais e consultas geográficas. [Documentação oficial do PostGIS](https://postgis.net/documentation/)
 
-### Bibliotecas
-- **Pillow**: [Gerenciamento de imagens](https://pillow.readthedocs.io/)
-- **dj_rest_auth**: [Autenticação de usuários com dj-rest-auth](https://dj-rest-auth.readthedocs.io/)
+---
+
+### Principais Bibliotecas
+
+- **dj-rest-auth**: [Autenticação de usuários com dj-rest-auth](https://dj-rest-auth.readthedocs.io/)
+- **Django**: [Framework web com Django](https://docs.djangoproject.com/)
 - **django-allauth**: [Autenticação de usuários com django-allauth](https://docs.allauth.org/)
 - **django-filter**: [Criação de filtros com django-filter](https://django-filter.readthedocs.io/)
+- **djangorestframework**: [API REST com Django REST Framework](https://www.django-rest-framework.org/)
+- **djangorestframework-gis**: [Extensão GIS para Django REST Framework](https://github.com/openwisp/jango-rest-framework-gis)
+- **drf-spectacular**: [Documentação de API com DRF Spectacular](https://drf-spectacular.readthedocs.io/)
+- **phonenumbers**: [Validação de números de telefone](https://github.com/daviddrysdale/python-phonenumbers)
+- **Pillow**: [Gerenciamento de imagens com Pillow](https://pillow.readthedocs.io/)
+- **psycopg2-binary**: [Driver PostgreSQL para Python](https://www.psycopg.org/docs/)
+- **validate-docbr**: [Validação de documentos brasileiros](https://sambapython.github.io/docbr/)
+
+---
