@@ -14,13 +14,13 @@
 
 <div style="text-align: justify;">
     <h4> 
-        Energi Analyzer** é um projeto desenvolvido como parte de uma residência em software organizada pelo CEPEI. Este projeto foi criado para atender ao desafio de Otimização Energética Inteligente na Indústria 4.0, proposto em um hackathon. Nossa equipe escolheu este tema visando criar uma solução eficiente para o monitoramento e manutenção da iluminação pública.
+        Energi Analyzer** é um projeto desenvolvido como parte da residência em software organizada pelo CEPEI. Este projeto foi criado para atender ao desafio de Otimização Energética Inteligente na Indústria 4.0, proposto em um hackathon. Nossa equipe escolheu este tema visando criar uma solução eficiente para o monitoramento e manutenção da iluminação pública e privada.
     </h4>
 </div>
 
 ## Objetivo do Projeto
 
-O Energi Analyzer é uma ferramenta de monitoramento e gestão de lâmpadas em postes de iluminação pública, com foco em otimizar a eficiência energética e o processo de manutenção. Nosso objetivo é garantir que as lâmpadas estejam sempre operando de maneira ideal, minimizando custos e tempo de resposta em caso de falhas.
+O Energi Analyzer é uma ferramenta de monitoramento e gestão de lâmpadas em postes de iluminação pública/privada, com foco em otimizar a eficiência energética e o processo de manutenção. Nosso objetivo é garantir que as lâmpadas estejam sempre operando de maneira ideal, minimizando custos, tempo de resposta em caso de falhas e aumentando a eficácia e eficiente na manuntenção.
 
 ## Funcionalidades
 
@@ -28,11 +28,6 @@ O Energi Analyzer é uma ferramenta de monitoramento e gestão de lâmpadas em p
 - **Monitoramento Contínuo**: Monitora o status de cada lâmpada em tempo real, identificando rapidamente falhas ou irregularidades.
 - **Relatórios Periódicos**: Gera relatórios regulares sobre o desempenho e o estado de cada poste, fornecendo dados para manutenção preditiva.
 - **Eficiência na Manutenção**: A plataforma sugere ações de manutenção de acordo com o estado das lâmpadas, garantindo maior precisão e eficiência na reposição ou conserto das lâmpadas defeituosas.
-
-
-
-
-
 
 
 <h2 align="center"> 
@@ -43,6 +38,7 @@ O Energi Analyzer é uma ferramenta de monitoramento e gestão de lâmpadas em p
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina Python 3.10 ou qualquer versão acima. Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
+Em relação ao banco de dados, sugiro que você trabalhe com o PostgreSQL
 
 ### 🎲 Rodando o Back End (servidor)
 
@@ -75,10 +71,10 @@ $ python manage.py runserver
 
 🔑 Autenticação de Usuários:
 
-    POST /users/login/ Dar acesso ao usuário
-    POST /users/logout/ Desconecta o usuário
-    POST /users/register/company/ Resgistra uma empresa
-    POST /users/register/employee/ Resgistra um funcionário (apenas empresas podem cadastrar funcionários)
+    POST /users/login/ Dar acesso ao usuário;
+    POST /users/logout/ Desconecta o usuário;
+    POST /users/register/company/ Resgistra uma empresa;
+    POST /users/register/employee/ Resgistra um funcionário (apenas empresas podem cadastrar funcionários);
 ```
 <div align="center">
     <img src="assets/request-users-login.png" style="max-width: 100%; height: auto; width: 500px;"/>
@@ -90,7 +86,7 @@ $ python manage.py runserver
     
 
 🛠️ Tecnologias Utilizadas:
-```
+```bash
    ### Backend
 - **Django**: [Documentação oficial do Django](https://docs.djangoproject.com/)
 - **Django Rest Framework**: [Documentação oficial do Django Rest Framework](https://www.django-rest-framework.org/)
@@ -99,7 +95,7 @@ $ python manage.py runserver
 - **PostgreSQL**: [Documentação oficial do PostgreSQL](https://www.postgresql.org/docs/)
 - **PostGIS**: Extensão geoespacial para PostgreSQL que permite o trabalho com dados de geolocalização, incluindo suporte para operações espaciais e consultas geográficas. [Documentação oficial do PostGIS](https://postgis.net/documentation/)
 
----
+
 
 ### Principais Bibliotecas
 
@@ -114,3 +110,5 @@ $ python manage.py runserver
 - **Pillow**: [Gerenciamento de imagens com Pillow](https://pillow.readthedocs.io/)
 - **psycopg2-binary**: [Driver PostgreSQL para Python](https://www.psycopg.org/docs/)
 - **validate-docbr**: [Validação de documentos brasileiros](https://sambapython.github.io/docbr/)
+
+```
