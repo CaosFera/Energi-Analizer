@@ -93,9 +93,7 @@ $ python manage.py runserver
 
 ### Banco de Dados
 - **PostgreSQL**: [Documentação oficial do PostgreSQL](https://www.postgresql.org/docs/)
-- **PostGIS**: Extensão geoespacial para PostgreSQL que permite o trabalho com dados de geolocalização, incluindo suporte para operações espaciais e consultas geográficas. [Documentação oficial do PostGIS](https://postgis.net/documentation/)
-
-
+- **PostGIS**: [Documentação oficial do PostGIS](https://postgis.net/documentation/)
 
 ### Principais Bibliotecas
 
