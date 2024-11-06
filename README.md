@@ -114,5 +114,3 @@ $ python manage.py runserver
 - **Pillow**: [Gerenciamento de imagens com Pillow](https://pillow.readthedocs.io/)
 - **psycopg2-binary**: [Driver PostgreSQL para Python](https://www.psycopg.org/docs/)
 - **validate-docbr**: [Validação de documentos brasileiros](https://sambapython.github.io/docbr/)
-
----
