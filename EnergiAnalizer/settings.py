@@ -79,9 +79,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',  # Backend do django-allauth
 ]
 
-REST_AUTH_REGISTER_SERIALIZERS = {
-    
-}
 
 
 ROOT_URLCONF = 'EnergiAnalizer.urls'

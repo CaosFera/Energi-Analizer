@@ -10,8 +10,6 @@ class CurrentData(models.Model):
 
 
 class Location(models.Model):
-    #latitude = models.DecimalField("Latitude", max_digits=9, decimal_places=6)
-    #longitude = models.DecimalField("Longitude", max_digits=9, decimal_places=6)
     street = models.CharField("Rua", max_length=100, default="")
     district = models.CharField("Bairro", max_length=100, default="")
     city = models.CharField("Cidade", max_length=100, default="")
