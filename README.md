@@ -111,6 +111,6 @@ $ python manage.py runserver
 
 Agradecemos aos colaboradores que ajudaram no desenvolvimento deste projeto!
 
-- [**Nome do Colaborador 1**](https://github.com/usuario1) - Descrição do que fez no projeto
-- [**Nome do Colaborador 2**](https://github.com/usuario2) - Descrição do que fez no projeto
-- [**Nome do Colaborador 3**](https://github.com/usuario3) - Descrição do que fez no projeto
+- [**Wellington Ribeiro da Conceição**](https://github.com/WellingtonSI) - FullStack
+- [**Matheus Cajaíba**](https://github.com/matheuscajaib) - Front-end
+- [**Franklin Ramos**](https://github.com/franklinrms) - Front-end
